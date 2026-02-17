@@ -1,14 +1,24 @@
-from fastapi import FastAPI, Depends, HTTPException, status
-from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+# server.py
+# Main FastAPI application entry point
+
+from fastapi import FastAPI, Depends
 from sqlalchemy.orm import Session
-from jose import JWTError, jwt
-from database import engine, get_db
-import models, schemas, security
+from db_connect import engine, get_db
+import sql_tables
 
-models.Base.metadata.create_all(bind=engine)
+# Create all tables in the database on startup
+sql_tables.Base.metadata.create_all(bind=engine)
 
-app = FastAPI()
+app = FastAPI(
+    title="Creation Health App API",
+    description="Backend API for the Creation Virtual Health Application",
+    version="1.0.0"
+)
 
 @app.get("/")
 def home():
-    return {"message": "Backend is running!"}
+    return {"message": "Creation Health App Backend is running! 🚀"}
+
+@app.get("/health")
+def health_check():
+    return {"status": "healthy"}
