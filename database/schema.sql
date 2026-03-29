@@ -2,6 +2,10 @@
 -- PostgreSQL database dump
 --
 
+<<<<<<< HEAD
+=======
+\restrict XdyEuzNrllcpMJw30LN4AcKbdl0f70QZxM1j2i0BOwP74uKEPKkQIlEG45gWfLd
+>>>>>>> 4fba9e7a32a337633fe8e7bd08986a56ed06f786
 
 -- Dumped from database version 18.1
 -- Dumped by pg_dump version 18.1
@@ -1765,4 +1769,8 @@ ALTER TABLE ONLY public.wellness_logs
 -- PostgreSQL database dump complete
 --
 
+<<<<<<< HEAD
+=======
+\unrestrict XdyEuzNrllcpMJw30LN4AcKbdl0f70QZxM1j2i0BOwP74uKEPKkQIlEG45gWfLd
+>>>>>>> 4fba9e7a32a337633fe8e7bd08986a56ed06f786
 
